@@ -1,0 +1,553 @@
+[
+    {
+        "id": "8614311c4c626737",
+        "type": "tab",
+        "label": "Flux 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7b636fb087c9d49b",
+        "type": "mqtt in",
+        "z": "8614311c4c626737",
+        "name": "",
+        "topic": "passbox/porte/contaminee",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "5602534ba512db6d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 930,
+        "y": 420,
+        "wires": [
+            [
+                "d273b6bf1c9bdef7",
+                "4f415c3f057f4d92",
+                "cf730f4763becde9"
+            ]
+        ]
+    },
+    {
+        "id": "aed6fed2640a6c56",
+        "type": "mqtt in",
+        "z": "8614311c4c626737",
+        "name": "",
+        "topic": "passbox/porte/sterile",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "5602534ba512db6d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 870,
+        "y": 520,
+        "wires": [
+            [
+                "c174edb3db968795",
+                "4f415c3f057f4d92",
+                "cf730f4763becde9"
+            ]
+        ]
+    },
+    {
+        "id": "31e514b4cb8d7101",
+        "type": "mqtt in",
+        "z": "8614311c4c626737",
+        "name": "",
+        "topic": "passbox/cycle/depart",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "5602534ba512db6d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 900,
+        "y": 640,
+        "wires": [
+            [
+                "bfba9d4125f554a4",
+                "4f415c3f057f4d92",
+                "cf730f4763becde9"
+            ]
+        ]
+    },
+    {
+        "id": "fb8726bbae031fba",
+        "type": "mqtt in",
+        "z": "8614311c4c626737",
+        "name": "",
+        "topic": "passbox/urgence",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "5602534ba512db6d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 960,
+        "y": 720,
+        "wires": [
+            [
+                "d3af70059a8570f9",
+                "4f415c3f057f4d92",
+                "cf730f4763becde9"
+            ]
+        ]
+    },
+    {
+        "id": "d273b6bf1c9bdef7",
+        "type": "ui_led",
+        "z": "8614311c4c626737",
+        "order": 1,
+        "group": "e9d9039af1f5c582",
+        "width": 6,
+        "height": 2,
+        "label": "",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "OFF",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "ON",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": true,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Porte contaminée",
+        "x": 1230,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "c174edb3db968795",
+        "type": "ui_led",
+        "z": "8614311c4c626737",
+        "order": 1,
+        "group": "8f1156c71e7b4de2",
+        "width": 6,
+        "height": 2,
+        "label": "",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "OFF",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "ON",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Porte stérile",
+        "x": 1050,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "bfba9d4125f554a4",
+        "type": "ui_led",
+        "z": "8614311c4c626737",
+        "order": 1,
+        "group": "093f57de925738a3",
+        "width": 6,
+        "height": 2,
+        "label": "",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "OFF",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "ON",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": true,
+        "name": "Cycle",
+        "x": 1290,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "d3af70059a8570f9",
+        "type": "ui_led",
+        "z": "8614311c4c626737",
+        "order": 1,
+        "group": "4aed73d6f49f337d",
+        "width": 6,
+        "height": 2,
+        "label": "",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "OFF",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "ON",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": true,
+        "name": "Urgence",
+        "x": 1220,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "4f415c3f057f4d92",
+        "type": "function",
+        "z": "8614311c4c626737",
+        "name": "function 1",
+        "func": "let date = new Date().toLocaleString();\nlet topic = msg.topic;\nlet valeur = msg.payload;\n\n// ligne CSV\nmsg.payload = `${date},${topic},${valeur}`;\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 440,
+        "wires": [
+            [
+                "34e410e504877969"
+            ]
+        ]
+    },
+    {
+        "id": "34e410e504877969",
+        "type": "file",
+        "z": "8614311c4c626737",
+        "name": "fichier",
+        "filename": "C:\\Users\\ASUS\\Documents\\Nouveau dossier\\passbox_log.csv",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1630,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cf730f4763becde9",
+        "type": "function",
+        "z": "8614311c4c626737",
+        "name": "function 2",
+        "func": "// 1. Récupérer l'historique existant\nlet history = flow.get(\"history\") || [];\n\n// 2. Ajouter un nouvel événement\nhistory.push({\n    date: new Date().toLocaleString(),\n    event: msg.topic,\n    value: msg.payload\n});\n\n// 3. Limiter la taille de l'historique\nif (history.length > 100) {\n    history.shift(); // enlève le plus ancien\n}\n\n// 4. Sauvegarder l'historique\nflow.set(\"history\", history);\n\n// 5. Envoyer AU TABLEAU (TOUJOURS UN TABLEAU)\nmsg.payload = history;\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1460,
+        "y": 580,
+        "wires": [
+            [
+                "79513f24a013bef2"
+            ]
+        ]
+    },
+    {
+        "id": "79513f24a013bef2",
+        "type": "ui_table",
+        "z": "8614311c4c626737",
+        "group": "ce69647efcb3535e",
+        "name": "tab",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "columns": [
+            {
+                "field": "date",
+                "title": "timestamp",
+                "width": "48%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "event",
+                "title": "Événement",
+                "width": "25%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "value",
+                "title": "valeur",
+                "width": "25%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 1710,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "d0710c501edbaa18",
+        "type": "ui_button",
+        "z": "8614311c4c626737",
+        "name": "",
+        "group": "ce69647efcb3535e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "vider",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "Vider",
+        "payload": "clear",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 1490,
+        "y": 720,
+        "wires": [
+            [
+                "9f90ad3045098f53"
+            ]
+        ]
+    },
+    {
+        "id": "9f90ad3045098f53",
+        "type": "function",
+        "z": "8614311c4c626737",
+        "name": "vidertableau",
+        "func": "// vider l'historique\nflow.set(\"tableData\", []);\n\n// vider le tableau\nmsg.payload = [];\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 720,
+        "wires": [
+            [
+                "79513f24a013bef2"
+            ]
+        ]
+    },
+    {
+        "id": "975a172760a6b682",
+        "type": "file in",
+        "z": "8614311c4c626737",
+        "name": "lire fichier",
+        "filename": "C:\\Users\\ASUS\\Documents\\Nouveau dossier\\passbox_log.csv",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "utf8",
+        "allProps": false,
+        "x": 1500,
+        "y": 840,
+        "wires": [
+            [
+                "9daa030e5e4f4862"
+            ]
+        ]
+    },
+    {
+        "id": "9daa030e5e4f4862",
+        "type": "e-mail",
+        "z": "8614311c4c626737",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "jazitakwa8@gmail.com",
+        "dname": "mail",
+        "x": 1710,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "23a2e9331b4293dc",
+        "type": "inject",
+        "z": "8614311c4c626737",
+        "name": "envoyer fichier ",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 1300,
+        "y": 840,
+        "wires": [
+            [
+                "975a172760a6b682"
+            ]
+        ]
+    },
+    {
+        "id": "5602534ba512db6d",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "e9d9039af1f5c582",
+        "type": "ui_group",
+        "z": "8614311c4c626737",
+        "name": "Porte Contaminée",
+        "tab": "01a2554074f29cc7",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8f1156c71e7b4de2",
+        "type": "ui_group",
+        "z": "8614311c4c626737",
+        "name": "Porte Sterile",
+        "tab": "01a2554074f29cc7",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "093f57de925738a3",
+        "type": "ui_group",
+        "name": "Cycle",
+        "tab": "01a2554074f29cc7",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4aed73d6f49f337d",
+        "type": "ui_group",
+        "z": "8614311c4c626737",
+        "name": "Urgence",
+        "tab": "01a2554074f29cc7",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ce69647efcb3535e",
+        "type": "ui_group",
+        "name": "Données",
+        "tab": "01a2554074f29cc7",
+        "order": 5,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "01a2554074f29cc7",
+        "type": "ui_tab",
+        "name": "PassBox",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6601eb64befe0986",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-ui-led": "0.4.11",
+            "node-red-node-ui-table": "0.4.5",
+            "node-red-dashboard": "3.6.6",
+            "node-red-node-email": "5.0.2"
+        }
+    }
+]
